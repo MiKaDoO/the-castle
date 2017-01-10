@@ -69,12 +69,9 @@ let ``tour de jeu`` (cité : Cité) =
     |> ``mettre a jour la jauge`` face
 
 let ``est tombé`` (cité : Cité) = 
-    match cité with
-    | cité when 
-            cité.Population = ``jauge minimale`` 
-            || cité.Population = ``jauge maximale`` 
-            || cité.Armée = ``jauge maximale`` -> true
-    | _ -> false 
+    cité.Population = ``jauge minimale`` 
+    || cité.Population = ``jauge maximale`` 
+    || cité.Armée = ``jauge maximale``
 
 let rec jouer (cité : Cité) =
     printfn "%A" cité
